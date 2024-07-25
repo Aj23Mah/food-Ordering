@@ -1,0 +1,88 @@
+.popular-food {
+  background: #f9f9f9;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+
+  .sub_header {
+    font-family: Great Vibes;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--primary);
+    text-align: center;
+  }
+
+  .header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .popular-food {
+    padding: 4rem 0;
+
+    .sub_header {
+      font-size: 1.2rem;
+    }
+
+    .header {
+      font-size: 2rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .popular-food {
+    padding: 3rem 0;
+
+    .sub_header {
+      font-size: 1.3rem;
+    }
+
+    .header {
+      font-size: 1.7rem;
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      line-height: 20px;
+    }
+  }
+}
+@media (max-width: 426px) {
+  .popular-food {
+    padding: 3rem 0;
+
+    .sub_header {
+      font-size: 0.9rem;
+    }
+
+    .header {
+      font-size: 1.3rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .description {
+      padding: 0 1rem;
+      font-size: 0.7rem;
+      line-height: 1rem;
+    }
+  }
+}

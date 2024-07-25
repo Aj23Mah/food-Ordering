@@ -1,0 +1,133 @@
+/* Navbar Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 128px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  width: 100%;
+  position: relative; /* Ensure nav is positioned above other elements */
+  z-index: 10; /* Default z-index for nav */
+  
+}
+
+.navbar-logo img {
+  height: 40px;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  align-items: center; 
+  transition: 0.8s ease-in-out;
+  z-index: 20; /* Ensure menu has higher z-index when active */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+  &:hover {
+    color: var(--secondary);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.register_btn {
+  padding: 12px 24px;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  &:hover {
+    background: var(--secondary);
+    color: #000;
+  }
+}
+
+.menu-icons {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    z-index: 99;
+    padding: 10px 30px;
+    background: #000;
+    padding: 18px 64px;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    height: 100svh;
+    opacity: 0;
+    background: #000;
+    padding: 80px 0 30px 0;
+    margin: 0; 
+    transition: 0.8s ease-in-out;
+    z-index: 100; /* Higher z-index for nav-menu when active */
+  }
+
+  .nav-menu.active {
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    text-align: center;
+    color: #fff;
+  }
+
+  .register_btn {
+    display: none;
+  }
+
+  .menu-icons {
+    display: block;
+  }
+
+  .hamburger_icon {
+    background: var(--secondary);
+    font-weight: 600;
+    padding: 8px;
+  }
+
+  .cross_icon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: var(--primary);
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .nav-menu {
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+/* Target the indicators for the custom carousel class */
+.custom-carousel .mantine-Carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    background-color: #979595; /* Change this to your desired color */
+  }
+  
+  /* Active indicator style */
+  .custom-carousel .mantine-Carousel-indicator[data-active] {
+    background-color: #6d6d6d; /* Change this to your desired active color */
+  }

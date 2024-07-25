@@ -1,0 +1,312 @@
+.main-section {
+  overflow: hidden;
+}
+.hero-section {
+  overflow: hidden;
+  position: relative; /* Ensure relative positioning for absolute children */
+  z-index: 1; /* Ensure hero section is below nav */
+  
+}
+
+.landing {
+  background-image: url("../assets/images/topbg.jpg");
+  /* height: calc(100vh - 175px); */ /* Adjust height to fit within view */
+  height: 100svh;
+  width: 100%;
+  /* background-position: top; */
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing_header {
+  font-family: Poppins;
+  color: #fff;
+  font-size: 50px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 55px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 5px 0 rgba(0, 0, 0, 0.38);
+
+  span {
+    font-family: "Great Vibes", cursive;
+    font-size: 60px;
+    font-weight: normal;
+    margin: 0 1rem;
+  }
+}
+
+.resturant-form {
+  padding: 1.5rem;
+  background: var(--secondary);
+  display: flex;
+  gap: 20px;
+  width: 50%;
+  margin-bottom: 2rem;
+
+  input {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    width: 100%;
+  }
+
+  button {
+    width: 80%;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: #fff;
+      color: #000;
+    }
+  }
+}
+
+.funfacts {
+  display: flex;
+  width: 50%;
+
+  .fact-box {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+
+    .fact-img {
+      background: #fff;
+      border-radius: 50%;
+      padding: 20px;
+      text-align: center;
+      width: 80px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .fact-details {
+      .fact-count {
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+      .fact-label {
+        font-size: medium;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.cloud-img {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  /* overflow: hidden; Prevent overflow */
+
+  img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+.left-scooty {
+  position: absolute;
+  bottom: 0;
+
+  /* img {
+    opacity: 0;
+    scale: 0.8;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: contain 200px;
+
+    @keyframes fade-in {
+      to {
+        scale: 1;
+        opacity: 1;
+      }
+    }
+  } */
+}
+
+@media (max-width: 1024px) {
+  .landing {
+    height: 90svh;
+  }
+  .landing_header {
+    font-size: 40px;
+    width: 70%;
+
+    span {
+      font-size: 50px;
+    }
+  }
+
+  .resturant-form {
+    width: 80%;
+    padding: 1rem;
+
+    input {
+      padding: 0.8rem;
+    }
+
+    button {
+      width: 60%;
+    }
+  }
+
+  .funfacts {
+    width: 80%;
+
+    .fact-box {
+      gap: 1rem;
+
+      .fact-details {
+        .fact-count {
+          font-size: 1.6rem;
+          font-weight: 600;
+        }
+        .fact-label {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .cloud-img {
+    max-width: 100%;
+    img {
+      max-width: 100%; /* Adjust to prevent overflow on small screens */
+    }
+  }
+
+  .left-scooty {
+    width: 200px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .resturant-form {
+    width: 80%;
+    padding: 0.8rem;
+
+    input {
+      padding: 0.5rem;
+    }
+
+    button {
+      width: 60%;
+    }
+  }
+
+  .funfacts {
+    width: 80%;
+
+    .fact-box {
+      gap: 0.9rem;
+
+      .fact-img {
+        width: 60px;
+        padding: 1rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .fact-details {
+        .fact-count {
+          font-size: 1.6rem;
+          font-weight: 600;
+        }
+        .fact-label {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .landing_header {
+    font-size: 1.8rem;
+    width: 90%;
+
+    span {
+      font-size: 1.8rem;
+    }
+  }
+
+  .resturant-form {
+    width: 80%;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    button {
+      width: 100%;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+    }
+  }
+
+  .funfacts {
+    width: 100%;
+
+    .fact-box {
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .fact-img {
+        width: 50px;
+        padding: 0.8rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .fact-details {
+        text-align: center;
+
+        .fact-count {
+          font-size: 1.1rem;
+          font-weight: 500;
+        }
+        .fact-label {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .left-scooty {
+    width: 150px;
+
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.special-recipes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .special-recipes_card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 480px;
+    width: 480px;
+    font-family: arial;
+    background: #f9f9f9;
+
+    .card-img {
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}

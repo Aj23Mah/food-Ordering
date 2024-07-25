@@ -1,0 +1,18 @@
+.custom-carousel .mantine-Carousel-controls button {
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  font-size: large;
+  opacity: 0;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.custom-carousel:hover .mantine-Carousel-controls button {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
