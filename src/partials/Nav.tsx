@@ -8,7 +8,7 @@ import { ImCross } from "react-icons/im";
 
 const Nav = () => {
   const navItems = [
-    { label: "HOME PAGES", path: "/" },
+    { label: "HOME", path: "/" },
     { label: "GALLERY", path: "/" },
     { label: "ABOUT US", path: "/" },
     { label: "CONTACT US", path: "/" },

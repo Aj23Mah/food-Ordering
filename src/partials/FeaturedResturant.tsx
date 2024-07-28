@@ -176,9 +176,7 @@ const FeaturedResturant = () => {
                       src="https://player.vimeo.com/video/49674259"
                       width="1200"
                       height="750"
-                      frameborder="0"
                       allow="autoplay; fullscreen"
-                      allowfullscreen
                     ></iframe>
 
                     <button
@@ -187,7 +185,7 @@ const FeaturedResturant = () => {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-x"
+                        className="icon icon-tabler icon-tabler-x"
                         width="44"
                         height="44"
                         viewBox="0 0 24 24"

@@ -7,7 +7,13 @@ import restImg from "../assets/resource/featured-restaurant-img1.jpg";
 import { RiMotorbikeLine } from "react-icons/ri";
 import { BsCashCoin } from "react-icons/bs";
 
-const Card = ({ title, description, isVisible }) => (
+interface CardProps {
+  title: string;
+  description: string;
+  isVisible: boolean;
+}
+
+const Card: React.FC<CardProps> = ({ title, description, isVisible }) => (
   <div className={`p-6 border rounded-lg shadow-lg flex lg:flex-row flex-col items-center gap-5 card ${isVisible ? 'visible' : ''}`}>
     <img src={restImg} alt="" />
     <div className="w-full">
@@ -49,7 +55,8 @@ const Card = ({ title, description, isVisible }) => (
 );
 
 const TabsComponent = () => {
-  const [visibleCards, setVisibleCards] = useState([]);
+  const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const [activeTab, setActiveTab] = useState<string | null>('all');
 
   const allCards = [
     { title: "Domino's Pizza", description: "Pizza and Beverages" },
@@ -58,7 +65,7 @@ const TabsComponent = () => {
     { title: "Restaurant", description: "Various Dishes" },
   ];
 
-  const filterCards = (category) => {
+  const filterCards = (category: string | null) => {
     switch (category) {
       case "beverages":
         return allCards.filter(
@@ -94,16 +101,31 @@ const TabsComponent = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleTabChange = (value: string | null) => {
+    setActiveTab(value);
+    setVisibleCards([]);
+    setTimeout(() => {
+      const cards = document.querySelectorAll('.card');
+      const triggerBottom = window.innerHeight / 5 * 4;
+      cards.forEach((card, index) => {
+        const cardTop = card.getBoundingClientRect().top;
+        if (cardTop < triggerBottom) {
+          setVisibleCards((prev) => [...prev, index]);
+        }
+      });
+    }, 100);
+  };
+
   return (
     <div className=" w-full md:py-10 py-7 lg:px-[280px] md:px-16">
       <div className="sub_header text-center">Your Favourite Food</div>
       <div className="header text-center">CHOOSE YOUR FOOD</div>
       <Tabs
         variant="pills"
-        defaultValue="all"
+        value={activeTab}
+        onChange={handleTabChange}  // Corrected the prop name here
         color="#FFBE00"
         className="md:mt-9 mt-6"
-        onTabChange={() => setVisibleCards([])}
       >
         <Tabs.List className="custom-tabs-list" justify="center" mb={30}>
           <Tabs.Tab value="all" className="custom-tab">

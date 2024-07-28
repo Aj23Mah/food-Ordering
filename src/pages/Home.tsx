@@ -55,7 +55,7 @@ const Home = () => {
                   <div className="fact-count flex">
                     <CountUp
                       start={0}
-                      end={v.count}
+                      end={Number(v.count)}
                       duration={5}
                       delay={0}
                     ></CountUp>
