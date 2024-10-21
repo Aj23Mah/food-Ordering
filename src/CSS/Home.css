@@ -50,15 +50,15 @@
 }
 
 .resturant-form {
-  padding: 1.5rem;
+  padding: 1rem;
   background: var(--secondary);
   display: flex;
   gap: 20px;
-  width: 50%;
+  width: 60%;
   margin-bottom: 2rem;
 
   input {
-    padding: 1rem;
+    padding: .7rem;
     outline: none;
     border: none;
     width: 100%;
@@ -80,7 +80,7 @@
 
 .funfacts {
   display: flex;
-  width: 50%;
+  width: 60%;
 
   .fact-box {
     display: flex;
@@ -94,8 +94,8 @@
       background: #fff;
       border-radius: 50%;
       padding: 20px;
-      text-align: center;
       width: 80px;
+      height: 80px;
 
       img {
         width: 100%;

@@ -3,11 +3,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 128px;
+  padding: 1rem 128px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
   width: 100%;
-  position: relative; /* Ensure nav is positioned above other elements */
-  z-index: 10; /* Default z-index for nav */
+  position: relative; 
+  z-index: 10; 
   
 }
 
@@ -28,7 +28,7 @@ nav {
 .nav-link {
   text-decoration: none;
   color: #000;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   padding: 0.7rem 1rem;
   white-space: nowrap;
@@ -39,12 +39,12 @@ nav {
 }
 
 .register_btn {
-  padding: 12px 24px;
+  padding: .5rem 1.5rem;
   background: var(--primary);
   color: #fff;
   cursor: pointer;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   &:hover {
     background: var(--secondary);

@@ -72,8 +72,8 @@ const SpecialRecipes = () => {
             </div>
             <div className="flex py-5 gap-4 w-full">
               <div className="w-[30%] text-end">
-                <p className="font-semibold md:text-lg text-base">{v.day}</p>
-                <div className="md:text-base text-sm">
+                <p className="font-semibold text-base">{v.day}</p>
+                <div className="text-sm">
                   <p>{v.date}</p>
                   <p>By Webinane</p>
                 </div>
@@ -82,8 +82,8 @@ const SpecialRecipes = () => {
               <div className="border border-gray-400"></div>
 
               <div className="w-[40%]">
-                <h2 className="font-semibold md:text-lg text-base">{v.label}</h2>
-                <div className="md:text-base text-sm flex gap-5 text-[#EA1B25]">
+                <h2 className="font-semibold text-base">{v.label}</h2>
+                <div className="text-sm flex gap-5 text-[#EA1B25]">
                     <p className="flex items-center gap-1"><CiHeart /><p>12</p></p>
                     <p className="flex items-center gap-1"><BiMessageRounded /><p>7</p></p>
                 </div>

@@ -46,7 +46,7 @@ const DownloadApp = () => {
         opacity: isInView ? 1 : 0,
         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
       }}
-       className="md:block absolute bottom-0 hidden xl:left-72"> 
+       className="md:block absolute bottom-0 hidden xl:left-44 "> 
           <img src={mobileImg} alt="" />
         </div>
 
